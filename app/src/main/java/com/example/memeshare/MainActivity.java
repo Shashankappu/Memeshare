@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
     }
     private void loadMeme(){
         progressBar.setVisibility(imageView.VISIBLE);
-        RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://meme-api.herokuapp.com/gimme";
 
 // Request a string response from the provided URL.
@@ -113,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        queue.add(jsonObjectRequest);
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
     }
 
 }
