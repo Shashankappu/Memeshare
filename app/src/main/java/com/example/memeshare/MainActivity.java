@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // next meme
-                like.setImageResource(R.mipmap.whiteheart);
+                like.setImageResource(R.drawable.ic_heart);
                 loadMeme();
 
             }
@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!t){
-                like.setImageResource(R.mipmap.redheart);
+                like.setImageResource(R.drawable.ic_heartfull);
                 t=true;
                 } else {
-                    like.setImageResource(R.mipmap.whiteheart);
+                    like.setImageResource(R.drawable.ic_heart);
                     t = false;
                 }
             }
